@@ -17,8 +17,16 @@ export default function Chatbox({user, messages, sendMessage}) {
                 {
                     messages.map((message, i) => {
                         const keys = Object.keys(message);
+                        //{"Daniel": "Hi from daniel's client"}
+                        //["Daniel"]
+                    
                         const sender = keys[0] == user ? "SELF" : keys[0] == "Server" ? "SERVER" : "OTHER";
+                        // sender = "SELF"
+                        // sender = "SERVER"
+                        // sender = "OTHER"
+
                         const messageActual = message[keys[0]];
+                        //"Hi from daniel's client"
                          
                         return <ChatBubble sender={sender} name={keys[0]} message={messageActual} key={i}/>
                     })
@@ -31,7 +39,10 @@ export default function Chatbox({user, messages, sendMessage}) {
                         className="w-[80%] p-3 h-[100%] overflow-auto border-[1px] border-secondary-color rounded-md"
                         placeholder="Type your message here"
                     ></textarea>
-                    <button className="flex-auto h-max bg-accent text-primary-color p-2  justify-center items-center rounded-md flex gap-2" onClick={()=>sendMessage(message)}>
+                    <button className="flex-auto h-max bg-accent text-primary-color p-2  justify-center items-center rounded-md flex gap-2" onClick={()=>{
+                            sendMessage(message)
+                            setMessage('')
+                        }}>
                         <i className="bi bi-send"></i>
                         <span className="lg:block hidden">
                             Send Message
