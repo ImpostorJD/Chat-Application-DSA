@@ -21,9 +21,9 @@ export default function UserRegister({registrationResponse, registerUser}){
         md:w-[60%] md:h-[60%]">
           <img src={bg_image} className='w-full h-full absolute'/>
           <div className='bg-primary-variant w-full h-full bg-clip-padding backdrop-filter backdrop-blur-none bg-opacity-50'>
-            <div className='w-full flex h-[20%] justify-center'>
-              <img src={logo_img}/>
-              <span>
+            <div className='w-full flex h-[20%] justify-center items-center gap-2'>
+              <img src={logo_img} className='rounded-full border-[1px]'/>
+              <span className='text-[2rem] font-bold'>
                 Crossing Pub
               </span>
             </div>
