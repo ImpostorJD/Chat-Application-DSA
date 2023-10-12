@@ -26,7 +26,7 @@ function App() {
     }, [stompClient]);
 
     const connectToWebSocket = () => {
-        let Sock = new SockJS('http://192.168.1.15:8080/ws');
+        let Sock = new SockJS('http://https://dsa-chatapp-arlan-daniel.onrender.com/ws');
         const client = Stomp.over(Sock);
         client.connect({},  () => {
             setStompClient(client);
