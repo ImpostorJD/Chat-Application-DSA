@@ -21,10 +21,10 @@ export default function UserRegister({registrationResponse, registerUser}){
         md:w-[60%] md:h-[60%]">
           <img src={bg_image} className='w-full h-full absolute'/>
           <div className='bg-primary-variant w-full h-full bg-clip-padding backdrop-filter backdrop-blur-none bg-opacity-50'>
-            <div className='w-full flex h-[30%] justify-center items-center pt-5'>
+            <div className='w-full flex h-[35%] justify-center items-center pt-10'>
               <img src={logo_img} className='rounded-full border-[1px] w-auto border-black h-full'/>
             </div>
-            <div className='p-5 lg:p-6 md:p-10 flex flex-col gap-10 justify-center items-center h-[70%]'>
+            <div className='p-5 pt-0 lg:p-6 md:p-10 flex flex-col gap-10 justify-center items-center h-[65%]'>
               <h1 className='font-bold text-center w-full text-accent'>
                 Please Enter Your Name:
               </h1>
