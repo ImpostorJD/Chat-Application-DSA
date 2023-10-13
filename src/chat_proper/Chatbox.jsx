@@ -30,7 +30,7 @@ export default function Chatbox({user, messages, sendMessage}) {
                 <div className="w-full h-[100%] border border-primary-color rounded flex gap-3 items-center">
                     <textarea
                         value={message} onChange={(e) => setMessage(e.target.value)}
-                        className="w-[80%] p-3 max-h-[100%] overflow-auto border-[1px] border-secondary-color rounded-md"
+                        className="w-[80%] p-3 max-h-[100%] min-h-[100%] overflow-auto border-[1px] border-secondary-color rounded-md"
                         placeholder="Type your message here"
                     ></textarea>
                     <button className="flex-auto h-max bg-accent text-primary-color p-2  justify-center items-center rounded-md flex gap-2" onClick={() => {
