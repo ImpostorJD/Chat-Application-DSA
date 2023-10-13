@@ -13,7 +13,7 @@ export default function Chatbox({user, messages, sendMessage}) {
                     Chat Room
                 </p>
             </div>
-            <div className="h-[70%] lg:h-[75%] overflow-y-auto overflow-x-hidden px-3"> 
+            <div className="h-[70%] lg:h-[75%] overflow-y-auto overflow-x-hidden px-3 py-2"> 
                 {
                     messages.map((message, i) => {
                         const keys = Object.keys(message);
@@ -27,7 +27,7 @@ export default function Chatbox({user, messages, sendMessage}) {
                 }
             </div>
             <div className="h-[20%] lg:h-[15%] p-4 border-t-secondary-color border-t-[1px]">
-                <div className="w-full h-[100%] border border-primary-color rounded flex gap-3 items-center">
+                <div className="w-full max-h-[100%] border border-primary-color rounded flex gap-3 items-center">
                     <textarea
                         value={message} onChange={(e) => setMessage(e.target.value)}
                         className="w-[80%] p-3 h-[100%] overflow-auto border-[1px] border-secondary-color rounded-md"
